@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Packaging &mdash; Packaging Demo  documentation</title>
@@ -11,11 +11,10 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Packaging Demo
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Packaging Demo
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -71,8 +74,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Packaging</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Packaging</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/packaging.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -97,56 +100,56 @@
 <blockquote>
 <div><p>The setup file can be either a .py file or a .cfg file. I am using cfg as recommended in the official packaging instructions, but I don’t really know what the pros and cons are.</p>
 </div></blockquote>
-<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[metadata]</span><span class="w"></span>
-<span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">example-package-YOUR-USERNAME-HERE</span><span class="w"></span>
-<span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0.0.1</span><span class="w"></span>
-<span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Example Author</span><span class="w"></span>
-<span class="na">author_email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">author@example.com</span><span class="w"></span>
-<span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">A small example package</span><span class="w"></span>
-<span class="na">long_description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">file: README.md</span><span class="w"></span>
-<span class="na">long_description_content_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">text/markdown</span><span class="w"></span>
-<span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/pypa/sampleproject</span><span class="w"></span>
-<span class="na">project_urls</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">    </span><span class="na">Bug Tracker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/pypa/sampleproject/issues</span><span class="w"></span>
-<span class="na">classifiers</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">    </span><span class="na">Programming Language :: Python :: 3</span><span class="w"></span>
-<span class="w">    </span><span class="na">License :: OSI Approved :: MIT License</span><span class="w"></span>
-<span class="w">    </span><span class="na">Operating System :: OS Independent</span><span class="w"></span>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[metadata]</span>
+<span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">example-package-YOUR-USERNAME-HERE</span>
+<span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0.0.1</span>
+<span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Example Author</span>
+<span class="na">author_email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">author@example.com</span>
+<span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">A small example package</span>
+<span class="na">long_description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">file: README.md</span>
+<span class="na">long_description_content_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">text/markdown</span>
+<span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/pypa/sampleproject</span>
+<span class="na">project_urls</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="na">Bug Tracker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/pypa/sampleproject/issues</span>
+<span class="na">classifiers</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="na">Programming Language</span><span class="w"> </span><span class="o">:</span><span class="s">: Python :: 3</span>
+<span class="w">    </span><span class="na">License</span><span class="w"> </span><span class="o">:</span><span class="s">: OSI Approved :: MIT License</span>
+<span class="w">    </span><span class="na">Operating System</span><span class="w"> </span><span class="o">:</span><span class="s">: OS Independent</span>
 
-<span class="k">[options]</span><span class="w"></span>
-<span class="na">package_dir</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">src</span><span class="w"></span>
-<span class="na">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">find:</span><span class="w"></span>
-<span class="na">python_requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&gt;=3.6</span><span class="w"></span>
+<span class="k">[options]</span>
+<span class="na">package_dir</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">src</span>
+<span class="na">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">find:</span>
+<span class="na">python_requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&gt;=3.6</span>
 
-<span class="k">[options.packages.find]</span><span class="w"></span>
-<span class="na">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">src</span><span class="w"></span>
+<span class="k">[options.packages.find]</span>
+<span class="na">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">src</span>
 </pre></div>
 </div>
 <p>Obviously, this is a template, and we need to update it to reflect our project. The version of this file inside this repository has already been updated; you can use this as a base for creating your own setup.cfg files. The actual .cfg file for this package is below. <strong>important: make sure you change the name of the package to reflect your username. This is to ensure the package has a unique name</strong></p>
-<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[metadata]</span><span class="w"></span>
-<span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">example-package-bwheelz36</span><span class="w"></span>
-<span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">attr: MyPackage.__version__</span><span class="w"></span>
-<span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Brendan Whelan</span><span class="w"></span>
-<span class="na">author_email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">bwheelz36@gmail.com</span><span class="w"></span>
-<span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">A small example package</span><span class="w"></span>
-<span class="na">long_description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">file: README.md</span><span class="w"></span>
-<span class="na">license_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LICENSE</span><span class="w"></span>
-<span class="na">long_description_content_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">text/markdown</span><span class="w"></span>
-<span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/pypa/sampleproject</span><span class="w"></span>
-<span class="na">project_urls</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">    </span><span class="na">Bug Tracker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/pypa/sampleproject/issues</span><span class="w"></span>
-<span class="na">classifiers</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">    </span><span class="na">Programming Language :: Python :: 3</span><span class="w"></span>
-<span class="w">    </span><span class="na">Operating System :: OS Independent</span><span class="w"></span>
-<span class="k">[options]</span><span class="w"></span>
-<span class="na">package_dir</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">.</span><span class="w"></span>
-<span class="na">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MyPackage</span><span class="w"></span>
-<span class="na">python_requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&gt;=3.6</span><span class="w"></span>
-<span class="na">install_requires</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">    </span><span class="na">numpy &gt;</span><span class="o">=</span><span class="w"> </span><span class="s">1.6.0</span><span class="w"></span>
-<span class="w">    </span><span class="na">matplotlib &gt;</span><span class="o">=</span><span class="w"> </span><span class="s">3.5.0</span><span class="w"></span>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[metadata]</span>
+<span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">example-package-bwheelz36</span>
+<span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">attr: MyPackage.__version__</span>
+<span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Brendan Whelan</span>
+<span class="na">author_email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">bwheelz36@gmail.com</span>
+<span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">A small example package</span>
+<span class="na">long_description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">file: README.md</span>
+<span class="na">license_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LICENSE</span>
+<span class="na">long_description_content_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">text/markdown</span>
+<span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/pypa/sampleproject</span>
+<span class="na">project_urls</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="na">Bug Tracker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/pypa/sampleproject/issues</span>
+<span class="na">classifiers</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="na">Programming Language</span><span class="w"> </span><span class="o">:</span><span class="s">: Python :: 3</span>
+<span class="w">    </span><span class="na">Operating System</span><span class="w"> </span><span class="o">:</span><span class="s">: OS Independent</span>
+<span class="k">[options]</span>
+<span class="na">package_dir</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">.</span>
+<span class="na">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MyPackage</span>
+<span class="na">python_requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&gt;=3.6</span>
+<span class="na">install_requires</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="na">numpy &gt;</span><span class="o">=</span><span class="w"> </span><span class="s">1.6.0</span>
+<span class="w">    </span><span class="na">matplotlib &gt;</span><span class="o">=</span><span class="w"> </span><span class="s">3.5.0</span>
 </pre></div>
 </div>
 </section>

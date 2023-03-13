@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Generating documentation &mdash; Packaging Demo  documentation</title>
@@ -11,11 +11,10 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Packaging Demo
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Packaging Demo
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -81,8 +84,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Generating documentation</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Generating documentation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/documentation.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,10 +131,10 @@ See [<span class="nt">our documentation</span>](<span class="na">link</span>)
 
 <span class="gu">## Directory Structure</span>
 
-<span class="k">-</span> <span class="gs">**DemoPythonProject**</span> Source code
-<span class="k">-</span> <span class="gs">**examples**</span> examples of how to use
-<span class="k">-</span> <span class="gs">**docsrc**</span> source documentation
-<span class="k">-</span> <span class="gs">**docs**</span> html documentation generated with sphinx
+<span class="k">-</span><span class="w"> </span><span class="gs">**DemoPythonProject**</span> Source code
+<span class="k">-</span><span class="w"> </span><span class="gs">**examples**</span> examples of how to use
+<span class="k">-</span><span class="w"> </span><span class="gs">**docsrc**</span> source documentation
+<span class="k">-</span><span class="w"> </span><span class="gs">**docs**</span> html documentation generated with sphinx
 </pre></div>
 </div>
 </section>
@@ -139,7 +142,7 @@ See [<span class="nt">our documentation</span>](<span class="na">link</span>)
 <h2>Code comments and doc strings<a class="headerlink" href="#code-comments-and-doc-strings" title="Permalink to this heading"></a></h2>
 <p>Whenever you write a new function, it’s a good idea to add a docstring to the top of it like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_two_floats</span><span class="p">(</span><span class="n">parameter1</span><span class="p">,</span> <span class="n">parameter2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the docstring for some_function!</span>
 <span class="sd">    At a minimum, the docstring should state what the goal of the function is.</span>
 <span class="sd">    Ideally, it should also describe the inputs and outputs like this:</span>
@@ -183,9 +186,9 @@ See [<span class="nt">our documentation</span>](<span class="na">link</span>)
 <div><p>Note: we assume you have already installed the libraries. If not, go <a class="reference external" href="https://acrf-image-x-institute.github.io/packaging_demo/set_up_environment.html">here</a></p>
 </div></blockquote>
 <p>To generate sphinx html, from the command line navigate to the docsrc folder and type</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make github
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>github
 <span class="c1"># or on windows</span>
-./make github
+./make<span class="w"> </span>github
 </pre></div>
 </div>
 <p>This will create a folder called docs. You can take a look at docs/index.html - this is going to be the ‘home’ page for your documentation. Right now, it probably doesn’t look that useful since it doesn’t reflect your actual project, so read on!</p>

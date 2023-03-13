@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Environment set up &mdash; Packaging Demo  documentation</title>
@@ -11,11 +11,10 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Packaging Demo
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Packaging Demo
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -73,8 +76,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Environment set up</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Environment set up</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/set_up_environment.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -95,14 +98,14 @@
 <section id="linux-terminal-commands">
 <h2>Linux terminal commands<a class="headerlink" href="#linux-terminal-commands" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create and activate new virtual environment</span>
-python3 -m venv new_venv  <span class="c1"># you may have to install e.g. sudo apt install python3.10-venv, follow the prompts</span>
-<span class="nb">source</span> new_venv/bin/activate  <span class="c1"># activate &#39;new_venv&#39;</span>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>new_venv<span class="w">  </span><span class="c1"># you may have to install e.g. sudo apt install python3.10-venv, follow the prompts</span>
+<span class="nb">source</span><span class="w"> </span>new_venv/bin/activate<span class="w">  </span><span class="c1"># activate &#39;new_venv&#39;</span>
 
-mkdir new_repo
-<span class="nb">cd</span> new_repo
-wget https://github.com/ACRF-Image-X-Institute/packaging_demo/raw/master/dev_requirements dev_requirements.txt
-pip install -r dev_requirements
-git init <span class="c1"># set this folder up as a git repository. If you create a new repo on github, it will tell you the commands needed to push this repository </span>
+mkdir<span class="w"> </span>new_repo
+<span class="nb">cd</span><span class="w"> </span>new_repo
+wget<span class="w"> </span>https://github.com/ACRF-Image-X-Institute/packaging_demo/raw/master/dev_requirements<span class="w"> </span>dev_requirements.txt
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>dev_requirements
+git<span class="w"> </span>init<span class="w"> </span><span class="c1"># set this folder up as a git repository. If you create a new repo on github, it will tell you the commands needed to push this repository </span>
 </pre></div>
 </div>
 </section>
@@ -162,8 +165,8 @@ git init <span class="c1"># set this folder up as a git repository. If you creat
 <p><strong>Anaconda/conda</strong></p>
 <p>Anaconda comes with the Anaconda Prompt, which you can use instead of cmd. This will have python set up correctly.</p>
 <p>Alternatively, you can use conda environments:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda create -n python3 python
-conda activate python3
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>python3<span class="w"> </span>python
+conda<span class="w"> </span>activate<span class="w"> </span>python3
 </pre></div>
 </div>
 <p><strong>From the Python <a class="reference external" href="https://www.python.org/">website</a></strong></p>
